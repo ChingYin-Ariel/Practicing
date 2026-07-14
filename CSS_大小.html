@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_大小</title>
+    <style>
+    /*
+            文字大小：
+                預設的文字大小是 16px
+                font-size:值;
+                1.所有的文字大小皆會繼承父系元素
+                2.文字最小到12px
+            單位：
+                絕對尺寸(不會再移動)
+                   px:像素
+                   pt:點  (一個點是 72/1 英吋)
+                   cm:公分
+                   mm:公厘
+                   pc:派卡
+                   in:英吋
+                相對尺寸：
+                   em: 字元 繼承父系元素 (我現在要是副系元素的幾倍)
+                   rem: 跟字元，依照祖系元素(html)或者是body
+                   避免我們不知道她當初在寫程式的時候，瀏覽器吃的是哪一個。所以html跟body會一起下。
+                   vw: 視窗寬度
+                   字體會依照頁面的"寬度"大小放大縮小。 
+                   制式應網頁(rwd)                  
+                   font-size: 10vw; 10/1的視窗寬度
+                   font-size: 100vw; 依格式窗的寬度
+                   vh: 視窗高度
+                   字體會依照頁面的"高度"放大縮小。
+                   font-size: 10vh;  10/1的視窗高度
+                   %:百分比
+        */
+        /*html,body{
+            font-size: 1in;
+        }*/
+        h1{
+            font-size: 10vw;  
+        }
+        h1 span{
+            font-size: 10%; 
+            /*em>我要比副系元素少一半*/
+            /*rem>跟著html或body的，他會優先繼承*/
+        }
+        .fs1{
+            font-size: 16px;
+        }
+        .fs2{
+            font-size: 14px;
+        }
+        .fs3{
+            font-size: 12px;
+        }
+        .fs4{
+            font-size: 10px;
+        }
+        .fs5{
+            font-size:8px;
+        }
+    </style>
+</head>
+<body>
+    <p>心中不良病人手冊產業經濟會員價緊急精品點這裡出售說著，加盟感染聲明草魚審批無門身份回家外貿制度網際事業看不到，單位屏東制定上帝其中第三執行環境直到故障食物必須給我操作系統，本網歌曲對她雜誌開了詳細訊息是在訪問執行環境一位並非國內外，級別意思大學生，風情教。</p>
+    <h1>你想兒童谷歌，身後。
+        <span>
+            我的尺寸
+        </span> 
+        <!--子元素-->
+        <!--子元素的大小會因為父元素的大小被繼承-->
+    </h1>
+    <p class="fs1">期待之外兩年視頻不16。</p>
+    <p class="fs2">期待之外兩年視頻不14。</p>
+    <p class="fs3">期待之外兩年視頻不12。</p>
+    <p class="fs4">期待之外兩年視頻不10。</p>
+    <p class="fs5">期待之外兩年視頻不8。</p>
+    <p class="fs6">期待之外兩年視頻不。</p>
+</body>
+</html>

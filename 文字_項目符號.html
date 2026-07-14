@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字_項目符號</title>
+    <style>
+        @counter-style my-stars {
+          system: cyclic;
+          symbols: "⭐" "✨" "🌟";
+          suffix: " "; 
+        }
+        li{
+            list-style-type: disc;
+            list-style-type: circle;
+            list-style-type: decimal;
+            list-style-type: decimal-leading-zero;
+            list-style-type: lower-greek;
+            list-style-type: georgian;
+            list-style-type: my-stars;
+                
+            /*要先在前面+
+                @counter-style my-stars {
+                  system: cyclic;
+                  symbols: "⭐" "✨" "🌟";
+                  suffix: " "; 
+                }*/
+            list-style-position: inside;
+            list-style-position: outside; /*預設值*/
+        }
+            /*list-style-image: url(https://kpopvisage.blob.core.windows.net/idols/blackpink-jisoo-fan-upload-b7eb2380_m.webp)*/   
+            /*可以在url裡面插入想要的圖案，項目符號就會變成圖案*/ 
+            
+            
+    </style>
+</head>
+<body>
+    <UL>
+        <li>清單文字</li>
+        <li>清單文字</li>
+        <li>清單文字</li>
+        <li>清單文字</li>
+    </UL>
+</body>
+</html>

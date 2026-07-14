@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字加線</title>
+    <style>
+        p{
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            color: #ab11b3;
+        }
+        /*會有3種型態*/
+        /*要同時具足2種型態
+        text-decoration-style
+        text-decoration-line*/
+        /*!!樣式會是後蓋前!!*/
+        .dashed{
+            text-decoration-style:dashed ;
+            text-decoration-line:overline;
+            text-decoration-line: line-through;
+            text-decoration-color: black;
+        }
+        .dotted{
+            text-decoration: dotted;
+            text-decoration-line:underline;
+        }
+        .double{
+            text-decoration: double;
+            text-decoration-line:underline;
+        }
+        .solid{
+            text-decoration: solid;
+            text-decoration-line:underline;
+        }
+        .wavy{
+            text-decoration: wavy;
+            text-decoration-line:underline;
+        }
+        .line-through{
+            text-decoration: dotted;
+            text-decoration-line:line-through;
+        }
+        .overline{
+            text-decoration: dotted;
+            text-decoration-line:overline;
+        }
+        .together{
+            text-decoration: line-through double peru;
+        }
+    </style>
+</head>
+<body>
+    <p class="dashed">我是dashed+改顏色</p>
+    <p class="dotted">我是dotted</p>
+    <p class="double">我是double</p>
+    <p class="solid">我是solid</p>
+    <p class="wavy">我是wavy</p>
+    <p class="line-through">我是line-through</p>
+    <p class="overline">我是overline</p>
+    <p class="together"> 但他們通常會寫一起(總攬)</p>
+</body>
+</html>

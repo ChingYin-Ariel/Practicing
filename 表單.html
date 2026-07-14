@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <h2>表單</h2>
+    <form action="#" method="get">
+        <input type="text" name="user" placeholder="請輸入使用者帳號" required><br>
+        <input type="password" name="pass" id="pass" placeholder="請輸入使用者密碼">
+        <button type="button" id="btn"><i class="fa-solid fa-eye" id="eye"></i></button><br>
+        <label for="boy">
+            <input type="radio" name="sexy" id="" value="男" checked>
+            男
+        </label>
+        <label for="girl">
+            <input type="radio" name="sexy" id="" value="女">
+            女
+        </label>
+        <br>
+        <label for="red">
+             <input type="checkbox" name="color" id="red" value="red" checked>
+            紅色
+        </label>
+        <label for="green">
+        <input type="checkbox" name="color" id="green" value="green">
+            綠色
+        </label>
+        <label for="blue">
+        <input type="checkbox" name="color" id="blue" value="blue">
+            藍色
+        </label>
+        <button type="submit">送出</button>
+    </form>
+</body>
+</html>
+<script>
+    let btn= document.getElementById("btn");
+    let pass= document.getElementById("pass");
+    let eye = document.getElementById("eye");
+    btn.addEventListener("click", function(){
+        if(pass.getAttribute("type")=="password"){
+            pass.setAttribute("type","text");
+            eye.setAttribute("class","fa-solid fa-eye-slash");
+        }else{
+            pass.setAttribute("type","password");
+            eye.setAttribute("class","fa-solid fa-eye");
+        }
+    })
+</script>
+
+<!-- btn.addEventListener("mouseover", function(){ 
+        這一行的click 可以改成 mouseover & touch =當我劃進去的時候要做這件事情
+        下面這一串是FOR 滑進滑出的(通常會在手機的時候做使用)
+    btn.addEventListener("mouseover", function(){
+        pass.setAttribute("type","text");
+        eye.setAttribute("class","fa-solid fa-eye-slash"); 
+    })
+    btn.addEventListener("mouseout", function(){ 
+        pass.setAttribute("type","password");
+        eye.setAttribute("class","fa-solid fa-eye"); 
+    })
+-->
+
+<!--
+    input radio(要用小寫的)= 選取按鈕
+    <input type="radio" name="" id="">
+     <label for="boy">
+            <input type="radio" name="sexy" id="" value="男">
+            男
+        </label>
+        <label for="girl">
+            <input type="radio" name="sexy" id="" value="女">
+            女
+        </label>
+    #單寫<input type="radio" name="sexy" id="" value="男">
+    這一行的時候會看不出在網頁上顯示不出內容
+    所一我們會搭配lable，但這樣就會對應到id
+    #name 要用一樣的名子，他只能回傳一個回去。
+-->
+
+<!--
+    <input type="checkbox" name="" id="">
+    input:checkbox=選取方塊
+    一樣可以用lable包起來
+
+-->
+
+
+<!-- <script type="text/plain" style="display: block; white-space: pre;">
+        <input type="text" name="user"> 
+        給了一個輸入框但不知道要幹嘛
+        所以才又加了後面的  "placeholder="請輸入使用者帳號">
+            </script>
+    
+            <script type="text/plain" style="display: block; white-space: pre;">
+        <form action="" method="get"> 連到後台網頁用的!!
+            當action="" 裡面沒有東西時可以用# 先代替
+            #=回到頁面的頂端
+            </script>
+    
+            <script type="text/plain" style="display: block; white-space: pre;">
+        <form action="" method="post"></form>
+        <form action="" method="get">
+            送機密資料可以 "post"!! 但要用搜尋引擎會死也找不到!!
+            一開始用get是因為
+            1.要看我這邊的東西是不是正常的
+            2.用搜尋引擎
+        <input type="password" name="" id="">
+        <button type="button"></button>  這個的button不會
+        <button type="submit">送出</button> 這個的button 是會送出東西的
+            眼睛要去 fontawsome 找 >>> https://fontawesome.com/search
+            找完自己要的圖片複製連結，貼上後，要去找【cdnjs】的程式碼插入
+            【cdnjs.】https://cdnjs.com/
+            找到後找fontawesome的連結複製後，貼在<head> 那裡的最後一行，眼睛就會出來惹。
+            id="" 要到css才會用到它
+            input 跟 button 是行內元素
+            
+
+            <label for="boy">
+                <input type="radio" name="sexy" id="" value="男">
+                男
+            </label>
+            <label for="girl">
+                <input type="radio" name="sexy" id="" value="女">
+                女
+            </label>
+            只能回傳一個回去，所一NAME 只能用同一個名字
+
+            java script>>
+
+        </script>
+
+        
+        <script type="text/plain" style="display: block; white-space: pre;">
+            這邊是寫javascript&css
+        let btn (要去讀取我的id)= document.getElementById("btn");  #document.getElementById("btn")=要去讀取這個元素  
+        let pass= document.getElementById("pass");
+        
+        btn.addEventListener("click", function(){ 
+            #addEventListener=監聽這個"btn"
+            這整句的意思是，我要去監聽他按下去這個動作"click",我要去執行一個function(方式)
+        if(pass.getAttribute("type")=="password"){ 
+            #如果我的password 他裡面的內容 (==代表比較)是password的話
+            #就會發生下面的事情
+        pass.setAttribute("type","text");
+            #這個pass去設定內容變成text
+        else{
+        pass.setAttribute("type","password");
+            #否則的話設定元素type是password
+        <button type="button" id="btn"><i class="fa-solid fa-eye" id="eye"></i></button><br>
+            #要讓他變成眼睛看不到，所以要加 id="eye"，讓下面的程式碼可以跑
+        let eye = document.getElementById("eye");
+            #讓他讀取這個物件
+        if(eye.setAttribute("class","fa-solid fa-eye-slash");
+            去設定他的class=屬性，當我按下去的時候會變成無眼睛
+        eye.setAttribute("class","fa-solid fa-eye");  
+            #否則的話變回來          
+         </script>
+         -->
+
+    

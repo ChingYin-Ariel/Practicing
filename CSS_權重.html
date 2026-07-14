@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_權重</title>
+    <style>
+                /*權重> 會依照分數的權重
+                    element(標籤)：   1分    可重複使用
+                    class類別.：      10分   可重複使用
+                    id類別#：        100分   在一張網頁內只能用一次
+                    行內式：        1000分  
+                    !important：   10000分  
+                    alt+b= 在以開啟的網頁中快速預覽此網頁
+                    .app=class
+                    同一個屬性會後蓋前(分數依樣的話，會前面得蓋掉後面的)
+                    
+                
+                 */
+        p{
+            color: red;
+        }
+        /*.app=class*/
+        .app{
+            color: blueviolet;
+        }
+        #add{
+            color: rgb(134, 119, 102);
+        }
+    </style>
+</head>
+<body>
+    <p>1.ABCDE</p>
+    <p class="app">2.ABCDE</p>
+    <p class="app" id="add" style="color: rgb(255, 91, 206)!important;">3.ABCDE</p>
+    <p style="color: brown;">4.ABCDE</p>
+    
+</body>
+</html>
